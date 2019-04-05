@@ -24,6 +24,14 @@ abstract class Carte{
   }
 
   public String toString(){
+    return this.nom;
+  }
+
+  public String affichageConsole(){
     return String.format("%10s PV:%3d", nom, this.PV);
+  }
+
+  public String affichageGraphique(){
+    return nom +"\nPV : "+this.PV;
   }
 }

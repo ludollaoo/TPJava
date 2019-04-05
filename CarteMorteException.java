@@ -1,18 +1,19 @@
 public class CarteMorteException extends Exception{
 
-	private Equipe equipe;
+	private Vequipe vequipe;
 
-	public CarteMorteException(Equipe e){
+	public CarteMorteException(Vequipe e){
 		super("Cette carte est déjà morte");
-		this.equipe = e;
+		this.vequipe = e;
 	}
 
-	public CarteMorteException(Equipe e, Carte c){
+
+	public CarteMorteException(Vequipe e, Carte c){
 		super(c.getNom() + " est déjà morte");
-		this.equipe = e;
+		this.vequipe = e;
 	}
 
-	public Equipe getequipe(){
-		return this.equipe;
+	public Vequipe getequipe(){
+		return this.vequipe;
 	}
 }

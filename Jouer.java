@@ -1,9 +1,10 @@
 class Jouer{
 	
 	public static void jouer(){
+		//preparation
 		int tour = 0;
-		Equipe e1 = new Equipe(1);
-		Equipe e2 = new Equipe(2);
+		Vequipe e1 = new Vequipe(1);
+		Vequipe e2 = new Vequipe(2);
 		//ajouter une fonction composerEquipe() qui permet de composer son equipe au debut
 		//e1.composerEquipe();
 		//e2.composerEquipe();
@@ -13,7 +14,13 @@ class Jouer{
 		e2.add(new Minotaure());
 		e2.add(new Panoramix());
 
+		//lancement de l'affichage
+		Fenetre f1 = new Fenetre(e1, e2);
+
+
+		//debut du tour par tour
 		while(!(e1.isEmpty()) && !(e2.isEmpty())){
+			if(tour > 50){ break;} //limitation du temps de jeu
 
 			//debut du tour, affichage
 			System.out.println("Tour : " + tour);
@@ -52,10 +59,10 @@ class Jouer{
 		}
 
 		// fin de jeu, declaration du vainqueur et affichage
-		if(!e1.isEmpty()){
-			System.out.println("Victoire de " + e1.toString());
-		} else if(!e2.isEmpty()){
+		if(e1.isEmpty()){
 			System.out.println("Victoire de " + e2.toString());
+		} else if(e2.isEmpty()){
+			System.out.println("Victoire de " + e1.toString());
 		} else {
 			System.out.println("Egalité");
 		}

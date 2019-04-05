@@ -9,11 +9,15 @@ abstract class Paladin extends Carte implements Attaque, Soigne{
     this.soigne = soigne;
     }
 
-  public String toString(){
+  public String affichageConsole(){
     String sPaladin = "Paladin";
     String sdegat = "degat:";
     String ssoigne = "soigne:";
-    return String.format("%10s %s %7s%3d %7s%3d", sPaladin, super.toString(),sdegat, degat,ssoigne, soigne);
+    return String.format("%10s %s %7s%3d %7s%3d", sPaladin, super.affichageConsole(),sdegat, degat,ssoigne, soigne);
+  }
+
+  public String affichageGraphique(){
+    return "Paladin "+super.affichageGraphique()+ "\ndegat : " + this.degat +"\nsoigne : " + this.soigne;
   }
 
    public abstract void attaque(Carte c);

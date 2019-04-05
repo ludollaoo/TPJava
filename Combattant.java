@@ -6,10 +6,14 @@ abstract class Combattant extends Carte implements Attaque{
     this.degat = degat;
   }
 
-  public String toString(){
+  public String affichageConsole(){
     String sCombattant = "Combattant";
     String sdegat = "degat:";
-    return String.format("%10s %s %7s%3d", sCombattant, super.toString(), sdegat, degat);
+    return String.format("%10s %s\n%7s%3d", sCombattant, super.affichageConsole(), sdegat, degat);
+  }
+
+  public String affichageGraphique(){
+    return "Combattant "+super.affichageGraphique()+ "\ndegat : " + this.degat;
   }
 
   public abstract void attaque(Carte c);
