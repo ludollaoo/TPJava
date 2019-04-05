@@ -9,7 +9,7 @@ abstract class Combattant extends Carte implements Attaque{
   public String affichageConsole(){
     String sCombattant = "Combattant";
     String sdegat = "degat:";
-    return String.format("%10s %s\n%7s%3d", sCombattant, super.affichageConsole(), sdegat, degat);
+    return String.format("%10s %s %7s%3d", sCombattant, super.affichageConsole(), sdegat, degat);
   }
 
   public String affichageGraphique(){

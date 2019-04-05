@@ -33,12 +33,14 @@ class Main{
 
     //Jouer.jouer();
 
-    Vequipe e1 = new Vequipe(1);
+    /*Vequipe e1 = new Vequipe(1);
     Vequipe e2 = new Vequipe(2);
     e1.add(new Goliath());
     e1.add(new Galaad());
     e2.add(new Minotaure());
     e2.add(new Panoramix());
-    Fenetre f1 = new Fenetre(e1, e2);
+    Fenetre f1 = new Fenetre(e1, e2);*/
+
+    Jouer.jouer2();
   }
 }

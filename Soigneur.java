@@ -10,7 +10,7 @@ abstract class Soigneur extends Carte implements Soigne{
   public String affichageConsole(){
     String sSoigneur = "Soigneur";
     String sSoigne = "soigne:";
-    return String.format("%10s %s\n%7s%3d", sSoigneur, super.affichageConsole(), sSoigne, soigne);
+    return String.format("%10s %s %7s%3d", sSoigneur, super.affichageConsole(), sSoigne, soigne);
   }
 
   public String affichageGraphique(){
