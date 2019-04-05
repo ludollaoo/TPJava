@@ -94,7 +94,9 @@ class Jouer{
 		Vequipe e2 = new Vequipe(2);
 		e1.add(new Goliath());
 		e1.add(new Galaad());
+		e1.add(new Dyonisos());
 		e2.add(new Minotaure());
+		e2.add(new Galaad());
 		e2.add(new Panoramix());
 
 		//initialisation graphique
